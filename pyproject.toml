@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lerobot_teleoperator_fleximu"
+version = "0.0.1"
+description = "LeRobot teleoperator plugin using 3 IMUs and 1 flex sensor for SO-101 teleoperation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "ZhihaoTypeA" }
+]
+dependencies = [
+  "lerobot",
+  "draccus",
+  "numpy",
+  "scipy",
+  "mujoco"
+]
+
+[project.scripts]
+fleximu-safe-teleoperate = "lerobot_teleoperator_fleximu.safe_teleoperate:main"
+fleximu-safe-record = "lerobot_teleoperator_fleximu.safe_record:main"
+fleximu-preflight = "lerobot_teleoperator_fleximu.preflight_cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["lerobot_teleoperator_fleximu*"]
