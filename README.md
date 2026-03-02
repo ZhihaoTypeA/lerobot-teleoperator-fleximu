@@ -120,11 +120,13 @@ Hardware BOM is available in [bom/BOM.md](bom/BOM.md).
 ## Demo 
 Results of Data Collection and Training with the Teleoperator Fleximu
 
+**ACT**
+
 ![ACT Demo](media/ACT_demo.gif)
 
-**ACT**
+**SmolVLA** (task: "Pick up the marked white block and place it into the cardboard box")
 
 ![SmolVLA Demo](media/SmolVLA_demo.gif)
 
-**SmolVLA** (task: "Pick up the marked white block and place it into the cardboard box")
+
 
