@@ -1,6 +1,6 @@
 # lerobot_teleoperator_fleximu
 
-[![Demo Video](media/teleop_demo_pic.jpg)](media/teleop_demo.mp4)
+![Demo](media/teleop_demo.gif)
 
 Teleoperator plugin for LeRobot that maps 3 IMUs + 1 flex sensor signals to SO-101 6-DoF joint actions.
 This package also provides preflight wrappers to reduce dangerous startup jumps after IMU/FLEX calibration.
@@ -117,13 +117,14 @@ Hardware BOM is available in [bom/BOM.md](bom/BOM.md).
 - In `fleximu-safe-teleoperate` / `fleximu-safe-record`, `mujoco_model_path` is forwarded to `--teleop.model_xml` unless you set `--teleop.model_xml` explicitly.
 - `rrt` mode in preflight and `Ground Safety Filter` requires `mujoco` and a valid model XML/MJCF path.
 
-## Results of Data Collection and Training with the Teleoperation Device
+## Demo 
+Results of Data Collection and Training with the Teleoperator Fleximu
 
-<video src="media/ACT_demo_lr.mp4" controls width="800"></video>
+![ACT Demo](media/ACT_demo.gif)
 
 **ACT**
 
-<video src="media/SmolVLA_demo_lr.mp4" controls width="800"></video>
+![SmolVLA Demo](media/SmolVLA_demo.gif)
 
 **SmolVLA** (task: "Pick up the marked white block and place it into the cardboard box")
 
