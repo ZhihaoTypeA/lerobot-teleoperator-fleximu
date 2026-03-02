@@ -1,12 +1,13 @@
 # lerobot_teleoperator_fleximu
 
+[![Demo Video](media/teleop_demo_pic.jpg)](media/teleop_demo.mp4)
+
 Teleoperator plugin for LeRobot that maps 3 IMUs + 1 flex sensor signals to SO-101 6-DoF joint actions.
 This package also provides preflight wrappers to reduce dangerous startup jumps after IMU/FLEX calibration.
 
 - `fleximu-preflight`: run preflight only
 - `fleximu-safe-teleoperate`: run preflight to a fully extended pose , then launch the official `lerobot-teleoperate`
 - `fleximu-safe-record`: run preflight to a fully extended pose, then launch the official `lerobot-record`
-
 
 ## Install
 
@@ -99,6 +100,10 @@ These are plugin teleop parameters. Pass them with `--teleop.<name>=...`.
 - `--teleop.track_only_collision_geoms=true|false`
 - `--teleop.ik_q123_scale=-1.0`
 
+## BOM
+
+Hardware BOM is available in [bom/BOM.md](bom/BOM.md).
+
 ## Notes
 - `fleximu-safe-teleoperate` is a wrapper around `lerobot-teleoperate` and `fleximu-safe-record` is a wrapper around `lerobot-record`.
 - All unknown arguments are forwarded to the official command as-is.
@@ -111,3 +116,14 @@ These are plugin teleop parameters. Pass them with `--teleop.<name>=...`.
 - In preflight, `linear`: smooth interpolation in action space, `rrt`: runs RRT-connect in joint space, then executes densified trajectory (highly recommended).
 - In `fleximu-safe-teleoperate` / `fleximu-safe-record`, `mujoco_model_path` is forwarded to `--teleop.model_xml` unless you set `--teleop.model_xml` explicitly.
 - `rrt` mode in preflight and `Ground Safety Filter` requires `mujoco` and a valid model XML/MJCF path.
+
+## Results of Data Collection and Training with the Teleoperation Device
+
+<video src="media/ACT_demo_lr.mp4" controls width="800"></video>
+
+**ACT**
+
+<video src="media/SmolVLA_demo_lr.mp4" controls width="800"></video>
+
+**SmolVLA** (task: "Pick up the marked white block and place it into the cardboard box")
+
