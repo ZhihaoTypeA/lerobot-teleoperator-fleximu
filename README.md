@@ -102,7 +102,7 @@ These are plugin teleop parameters. Pass them with `--teleop.<name>=...`.
 
 ## BOM
 
-Hardware BOM is available in [bom/BOM.md](bom/BOM.md).
+Hardware BOM is available in [hardware/BOM.md](hardware/BOM.md).
 
 ## Notes
 - `fleximu-safe-teleoperate` is a wrapper around `lerobot-teleoperate` and `fleximu-safe-record` is a wrapper around `lerobot-record`.
