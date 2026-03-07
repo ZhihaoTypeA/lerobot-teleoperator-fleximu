@@ -58,6 +58,9 @@ fleximu-safe-record \
   --display_data=true \
 ```
 
+## Flags
+Detailed flags are available in [lerobot_teleoperator_fleximu/README.md](lerobot_teleoperator_fleximu/README.md).
+
 ## BOM
 
 Hardware BOM is available in [hardware/BOM.md](hardware/BOM.md).
